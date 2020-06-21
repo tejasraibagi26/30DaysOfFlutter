@@ -1,4 +1,4 @@
-name: Day0
+name: Day2
 description: A new Flutter project.
 
 # The following line prevents the package from being accidentally published to
@@ -51,6 +51,15 @@ flutter:
   assets:
     - images/avatar.png
     - images/profile.jpg
+    - images/netflix.png
+    - images/moneyheist.jpg
+    - images/friends.jpeg
+    - images/friends-logo.png
+    - images/dark.png
+    - images/dark-logo.png
+    - images/res.jpg
+    - images/res-logo.png
+    
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
@@ -73,6 +82,24 @@ flutter:
           weight: 600
         - asset: fonts/SourceSansPro-Black.ttf
           weight: 800
+
+    - family: OpenSans
+      fonts:
+        - asset: fonts/OpenSans-Regular.ttf
+          weight: 200
+        - asset: fonts/OpenSans-SemiBold.ttf
+          weight: 600
+        - asset: fonts/OpenSans-Bold.ttf
+          weight: 800
+    
+    - family: BebasNeue
+      fonts:
+        - asset: fonts/BebasNeue-Regular.ttf
+
+    - family: MoneyHeist
+      fonts:
+        - asset: fonts/MoneyHeistFont.ttf
+        
   #   - family: Trajan Pro
   #     fonts:
   #       - asset: fonts/TrajanPro.ttf
