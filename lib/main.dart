@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'Pages/Day2/NetflixHomePage.dart';
+import 'Pages/Day3/InstagramClone.dart';
 
 
 
@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: NetflixHomepage(),
+      home: InstagramClone(),
     );
   }
 }

@@ -24,6 +24,7 @@ dependencies:
   flutter:
     sdk: flutter
   font_awesome_flutter: ^8.8.1
+  flutter_emoji: ^2.2.1+1
 
 
   # The following adds the Cupertino Icons font to your application.
@@ -49,17 +50,7 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-    - images/avatar.png
-    - images/profile.jpg
-    - images/netflix.png
-    - images/moneyheist.jpg
-    - images/friends.jpeg
-    - images/friends-logo.png
-    - images/dark.png
-    - images/dark-logo.png
-    - images/res.jpg
-    - images/res-logo.png
-    
+    - images/
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
