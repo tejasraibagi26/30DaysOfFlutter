@@ -1,6 +1,6 @@
+import 'package:Day2/Day4/Commercial.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'Pages/Day3/InstagramClone.dart';
 
 
 
@@ -12,8 +12,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      theme: ThemeData(
+        accentColor: Colors.grey[100]
+      ),
       debugShowCheckedModeBanner: false,
-      home: InstagramClone(),
+      home: CommercialPage(),
     );
   }
 }
