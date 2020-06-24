@@ -1,8 +1,6 @@
-import 'package:Day2/Day4/Commercial.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
-
+import 'Day5/Foodiz.dart';
 
 void main() {
   runApp(MyApp());
@@ -16,7 +14,7 @@ class MyApp extends StatelessWidget {
         accentColor: Colors.grey[100]
       ),
       debugShowCheckedModeBanner: false,
-      home: CommercialPage(),
+      home: Foodiz(),
     );
   }
 }
