@@ -10,11 +10,15 @@ class LoginPage extends StatefulWidget {
 }
 
 class _LoginPageState extends State<LoginPage> {
+  bool isLoggedIn = false;
   GoogleSignIn _googleSignIn = GoogleSignIn(scopes: ['email']);
 
   login() async {
     try {
       await _googleSignIn.signIn();
+      setState(() {
+        isLoggedIn = true;
+      });
       Navigator.pushReplacement(
           context,
           CupertinoPageRoute(
@@ -25,6 +29,22 @@ class _LoginPageState extends State<LoginPage> {
                   )));
     } catch (err) {
       print(err);
+    }
+  }
+
+  @override
+  void initState() {
+    super.initState();
+
+    if (isLoggedIn) {
+      Navigator.pushReplacement(
+          context,
+          CupertinoPageRoute(
+              builder: (context) => Statisfy(
+                    username: _googleSignIn.currentUser.displayName,
+                    imageURl: _googleSignIn.currentUser.photoUrl,
+                    email: _googleSignIn.currentUser.email,
+                  )));
     }
   }
 
