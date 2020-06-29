@@ -1,6 +1,13 @@
 import 'package:flutter/material.dart';
 
 class Statisfy extends StatefulWidget {
+  final String username;
+  final String imageURl;
+  final String email;
+
+  const Statisfy({Key key, this.username, this.imageURl, this.email})
+      : super(key: key);
+
   @override
   _StatisfyState createState() => _StatisfyState();
 }
@@ -19,6 +26,7 @@ class _StatisfyState extends State<Statisfy> {
               end: Alignment.bottomCenter,
               colors: [Color(0xff2193b0), Color(0xff6dd5ed)])),
       child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
           Container(
             margin: EdgeInsets.all(20),
@@ -54,22 +62,36 @@ class _StatisfyState extends State<Statisfy> {
             children: <Widget>[
               Container(
                 margin: EdgeInsets.symmetric(horizontal: 20),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.start,
+                child: Column(
                   children: <Widget>[
-                    CircleAvatar(
-                      backgroundImage: AssetImage('images/profile.jpg'),
-                      radius: 25,
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: <Widget>[
+                        CircleAvatar(
+                          backgroundImage: widget.imageURl == null
+                              ? AssetImage('images/avatar.png')
+                              : NetworkImage(widget.imageURl),
+                          radius: 25,
+                        ),
+                        SizedBox(width: 20),
+                        Text(
+                          "Hello, " + widget.username + ".",
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontFamily: "AppleSF",
+                              fontSize: 30,
+                              fontWeight: FontWeight.w500),
+                        ),
+                      ],
                     ),
-                    SizedBox(width: 20),
                     Text(
-                      "Hello, Tejas.",
+                      "(" + widget.email + ")",
                       style: TextStyle(
                           color: Colors.white,
                           fontFamily: "AppleSF",
-                          fontSize: 30,
+                          fontSize: 10,
                           fontWeight: FontWeight.w500),
-                    )
+                    ),
                   ],
                 ),
               ),
@@ -205,7 +227,8 @@ class Todo extends StatelessWidget {
         SizedBox(width: 20),
         Text(
           todoTitle,
-          style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold,fontFamily: "AppleSF"),
+          style: TextStyle(
+              fontSize: 25, fontWeight: FontWeight.bold, fontFamily: "AppleSF"),
         )
       ],
     );

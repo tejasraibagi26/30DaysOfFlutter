@@ -1,4 +1,4 @@
-import 'package:Days30/Day8/GoogleOpinionRewards.dart';
+import 'package:Days30/Day9/Login.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
         accentColor: Colors.grey[100],
       ),
       debugShowCheckedModeBanner: false,
-      home: GoogleOpinionRewards(),
+      home: LoginPage(),
     );
   }
 }
