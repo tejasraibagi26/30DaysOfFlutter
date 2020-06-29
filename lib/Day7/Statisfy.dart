@@ -84,14 +84,14 @@ class _StatisfyState extends State<Statisfy> {
                         ),
                       ],
                     ),
-                    Text(
-                      "(" + widget.email + ")",
-                      style: TextStyle(
-                          color: Colors.white,
-                          fontFamily: "AppleSF",
-                          fontSize: 10,
-                          fontWeight: FontWeight.w500),
-                    ),
+                    // Text(
+                    //   "(" + widget.email + ")",
+                    //   style: TextStyle(
+                    //       color: Colors.white,
+                    //       fontFamily: "AppleSF",
+                    //       fontSize: 10,
+                    //       fontWeight: FontWeight.w500),
+                    // ),
                   ],
                 ),
               ),

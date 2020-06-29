@@ -18,6 +18,7 @@ class _LoginPageState extends State<LoginPage> {
       await _googleSignIn.signIn();
       setState(() {
         isLoggedIn = true;
+        print(isLoggedIn);
       });
       Navigator.pushReplacement(
           context,
@@ -29,22 +30,6 @@ class _LoginPageState extends State<LoginPage> {
                   )));
     } catch (err) {
       print(err);
-    }
-  }
-
-  @override
-  void initState() {
-    super.initState();
-
-    if (isLoggedIn) {
-      Navigator.pushReplacement(
-          context,
-          CupertinoPageRoute(
-              builder: (context) => Statisfy(
-                    username: _googleSignIn.currentUser.displayName,
-                    imageURl: _googleSignIn.currentUser.photoUrl,
-                    email: _googleSignIn.currentUser.email,
-                  )));
     }
   }
 
